@@ -1,18 +1,9 @@
-summary: React Application State Management
-id: react-state-management
-categories: React
-tags: react, reactathon
-status: Published
-authors: Kyle Hughes
-Feedback Link: https://google.com
 
 # Reactathon - Application state management by Kent C Dodds - Summary
 
 <!-- ------------------------ -->
 
 ## React is a state management library
-
-Duration: 3
 
 State management is challenging, but it doesn't need to be
 
@@ -30,11 +21,9 @@ Using the following mockup - let's start by building out the following functiona
 
 ---
 
-![](assets/UseState-Beginning.png)
+![](./UseState-Beginning.png)
 
 ## UseState
-
-Duration: 7
 
 ---
 
@@ -88,7 +77,7 @@ function App() {
 
 #### Slight modification - now we want to display the form value inside of the ResultContainer
 
-![](assets/LiftState.png)
+![](./LiftState.png)
 
 ---
 
@@ -129,8 +118,6 @@ Removing the value prop from Result Container would work just fine
 But if FormContainer is the only component requiring that piece of state, we should challenge ourselves to push that state back down or `collocate that piece of state`.
 
 ## UseReducer
-
-Duration: 3
 
 - Another way to manage complex state
 - More control over state transitions
@@ -182,14 +169,12 @@ function App() {
 
 ## UseContext
 
-Duration: 7
-
 - When lifting state up, context allows you to share state between components in a specific tree without prop drilling
 - Keep context's small and specific for easier maintainence and to prevent unnecessary performance impacts
 
 #### Now we want to be able to click on a result row in the left-pane and have that information display in the right pane.
 
-![](assets/LeftRightPane.png)
+![](./LeftRightPane.png)
 
 There are plenty of ways to accomplish this but let's use the context api for now.
 
@@ -274,8 +259,6 @@ function ResultContainer({ results }) {
 
 ## Composition
 
-Duration: 4
-
 - If prop-drilling is a problem, consider using component composition before using Context
 - Increases flexibility in components
 
@@ -351,18 +334,11 @@ function ResultContainer({ children }) {
 
 ## State - Visualized
 
-Duration: 1
-
-![](assets/where-to-put-state.png)
-
+![](./where-to-put-state.png)
+(source: Kent C Dodds, https://kentcdodds.com/blog/state-colocation-will-make-your-react-app-faster) 
 ## Takeways, Links & Other Conference notes
-
-Duration: 1
 
 - When state is closer to the component using it, it is easier to maintain
 - Collocated state simpifies the mental model when working in the code base
 
 [Reactathon speaker series link](https://www.youtube.com/watch?v=pkNzU-5oDiA)
-
-Other notes from the conference can be found here
-https://wiki.disneystreaming.com/display/INSIGHTS/Reactathon+2020
